@@ -957,3 +957,10 @@ require('lazy').setup({
 -- vim: ts=2 sts=2 sw=2 et
 
 vim.keymap.set('n', '<leader>fe', vim.cmd.Ex)
+
+-- Makes pyright work with standalone python scripts
+require('lspconfig').pyright.setup {
+  root_dir = function(fname)
+    return vim.fn.getcwd()
+  end,
+}
