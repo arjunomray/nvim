@@ -964,3 +964,6 @@ require('lspconfig').pyright.setup {
     return vim.fn.getcwd()
   end,
 }
+
+vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]
+vim.cmd [[highlight NonText guibg=NONE ctermbg=NONE]]
